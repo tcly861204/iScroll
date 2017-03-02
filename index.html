@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<link rel="stylesheet" href="css/iScroll.css"/>
+</head>
+<body>
+<div id="iScroll-container">
+	<div class="iScroll-scrollbox">
+		<div class="iScroll-item" style="background:red;">asdad</div>
+		<div class="iScroll-item" style="background: green;">asda</div>
+		<div class="iScroll-item" style="background: blue;">asdad</div>
+		<div class="iScroll-item" style="background: orange;">asdsadsa</div>
+	</div>
+</div>
+<script type="text/javascript" src="iScroll.js"></script>
+<script type="text/javascript">
+iScroll({
+    el:'#iScroll-container',   //父节点ID,必传
+	index : 0,
+    direction : 'vertical',       //horizontal水平 、vertical垂直 
+	delay : 5000,    //滚动时间间隔
+	page : [  
+	    {
+		    title:'北京',
+			callback:null
+		}
+	],
+	autoplay : false,   //是否自动播放默认不自动
+	easing : 'linear',    //
+	keyboard : false   //
+});
+</script>
+</body>
+</html>
