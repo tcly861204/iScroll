@@ -41,19 +41,21 @@
         constructor:Tools,
         init:function(opts){
             var obj = scrollContainer = this.getId(opts.el),
-                scrollBox = this.getClass('iScroll-scrollbox',obj),
-                items = this.getClass('iScroll-item',obj);
-
+                  scrollBox = this.getClass('iScroll-scrollbox',obj),
+                  items = this.getClass('iScroll-item',obj);
             if(items.length){
                 var len = items.length,
-                    iNow = 0,
+				      iNow = 0,
                     timer = null,
                     speed = 10,
                     iMove = 0,
                     that = this,
                     itemHeight = parseInt(this.getStyle(obj,'height'),'10');
-                // scrollBox.style.height = itemHeight*len+'px';
-                scrollBox.style.transform = 'translateY(-'+itemHeight*iMove+'px)';
+		            scrollBox.style.transform = 'translateY(-'+itemHeight*iMove+'px)';
+				   
+				
+				
+				
                 clearInterval(timer);
                 timer = setInterval(function(){
                     that.removeClass(items[iMove],'active');
@@ -68,6 +70,9 @@
                 },opts.delay);
             }
         },
+		autoPlay:function(){
+			
+		},
         getId:function(id){
             return document.querySelector(id) || document.getElementById(id.substring(1))
         },
