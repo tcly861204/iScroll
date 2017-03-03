@@ -45,7 +45,7 @@
                   items = this.getClass('iScroll-item',obj);
             if(items.length){
                 var len = items.length,
-				      iNow = 0,
+				    iNow = 0,
                     timer = null,
                     speed = 10,
                     iMove = 0,
